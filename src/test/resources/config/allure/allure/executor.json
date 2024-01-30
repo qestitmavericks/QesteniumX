@@ -1,0 +1,10 @@
+{
+   "name": "Jenkins",
+   "type": "jenkins",
+   "url": "https://qestit.com",
+   "buildOrder": 1,
+   "buildName": "Allure Report Customize | QESTIT",
+   "buildUrl": "https://qestit.com",
+   "reportUrl": "https://qestit.com",
+   "reportName": "Allure Report Customize | QESTIT"
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression Tests Ecommerce">
+
+    <listeners>
+        <listener class-name="com.qestit.listeners.AnnotationTransformer"/>
+    </listeners>
+    
+    <test name="Tests trying to failing End to End Shopping ">
+        <parameter name="BROWSER" value="firefox"/>
+        <classes>
+            <class name="com.qestit.projects.ecommerce.testcases.CompleteOrderTest"/>
+        </classes>
+    </test>
+
+</suite>
