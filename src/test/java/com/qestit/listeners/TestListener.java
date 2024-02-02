@@ -109,8 +109,8 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
         //Send Notification to Slack Channel
         SlackManager.sendTestExecutionSummary(iSuite.getAllMethods().size(), iSuite.getName(), "Check Telegram Channel");
         //Send notification to Telegram
+        TelegramManager.sendMessageText("🚀 Test Execution Summary: " + iSuite.getName() + " and below you can find the Report");
         TelegramManager.sendReportPath();
-        TelegramManager.sendMessageText("The Run is done with : " + iSuite.getName() + " and below you can find the Report");
         //Send mail
         EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
 

@@ -161,12 +161,12 @@ public class TestSimpleCode {
         PropertiesHelpers.loadAllFiles();
         //  Handle Properties file
         WebAction.logConsole(PropertiesHelpers.getValue("BROWSER"));
-        WebAction.logConsole(PropertiesHelpers.getValue("URL_CRM"));
+        WebAction.logConsole(PropertiesHelpers.getValue("URL_ECOMMERCE"));
         WebAction.logConsole(PropertiesHelpers.getValue("AUTHOR"));
         WebAction.logConsole(FrameworkConstants.EXCEL_DATA_FILE_PATH);
         WebAction.logConsole(Helpers.getCurrentDir() + PropertiesHelpers.getValue("EXCEL_DATA_FILE_PATH"));
 //        PropertiesHelpers.setFile("src/test/resources/config/data.properties");
-//        PropertiesHelpers.setValue("base_url", "https://anhtetser.com");
+//        PropertiesHelpers.setValue("base_url", "https://qestit.com/");
     }
 
     @Test

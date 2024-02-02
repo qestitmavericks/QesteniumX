@@ -21,8 +21,8 @@ public class EmailConfig {
     public static final String SERVER = "smtp.gmail.com";
     public static final String PORT = "465";
 
-    public static final String FROM = "khalilhany76@gmail.com";
-    public static final String PASSWORD = "vsuz scsk kdbt ztkj";
+    public static final String FROM = "";
+    public static final String PASSWORD = "";
 
     public static final String[] TO = {"khalilhany76@gmail.com"};
     public static final String SUBJECT = REPORT_TITLE;
