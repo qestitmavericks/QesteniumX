@@ -22,8 +22,8 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                sh 'mvn test'
+                echo 'Running tests with full debug logging...'
+                sh 'mvn -X test' // -X enables full debug logging
             }
         }
     }
