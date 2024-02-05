@@ -9,10 +9,6 @@ pipeline {
         cron('H */4 * * *') // Triggers every 4 hours
     }
 
-    parameters {
-        // Define any parameters for the pipeline
-    }
-
     stages {
         stage('Checkout') {
             steps {
