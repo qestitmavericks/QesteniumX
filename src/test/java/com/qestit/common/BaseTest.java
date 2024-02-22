@@ -12,15 +12,14 @@ import com.qestit.driver.DriverManager;
 import com.qestit.driver.TargetFactory;
 import com.qestit.helpers.PropertiesHelpers;
 import com.qestit.listeners.TestListener;
-import com.qestit.projects.ecommerce.CommonPage;
+import com.qestit.projects.ecommerce.BasePage;
 
 @Listeners({TestListener.class})
-public class BaseTest extends CommonPage {
+public class BaseTest extends BasePage {
 
-    @Parameters("BROWSER")
-    @BeforeMethod
-    public void createDriver(@Optional("chrome") String browser) {
-        WebDriver driver = ThreadGuard.protect(new TargetFactory().createInstance(browser));
+	@BeforeMethod
+    public void createDriver() {
+        WebDriver driver = ThreadGuard.protect(new TargetFactory().createInstance());
         DriverManager.setDriver(driver);
         driver.manage().window().maximize();
     }
@@ -30,12 +29,13 @@ public class BaseTest extends CommonPage {
         DriverManager.quit();
     }
 
-    public WebDriver createBrowser(@Optional("chrome") String browser) {
+    public WebDriver createBrowser() {
         PropertiesHelpers.loadAllFiles();
-        WebDriver driver = ThreadGuard.protect(new TargetFactory().createInstance(browser));
+        WebDriver driver = ThreadGuard.protect(new TargetFactory().createInstance());
         driver.manage().window().maximize();
         DriverManager.setDriver(driver);
         return DriverManager.getDriver();
     }
+
 
 }

@@ -9,7 +9,8 @@ import org.aeonbits.owner.Config.LoadType;
 @Sources({"system:properties",
         "system:env",
         "file:./src/test/resources/config/config.properties",
-        "file:./src/test/resources/config/data.properties"})
+        "file:./src/test/resources/config/data.properties",
+        "file:./src/test/resources/config/localizationData.properties"})
 
 public interface Configuration extends Config {
 

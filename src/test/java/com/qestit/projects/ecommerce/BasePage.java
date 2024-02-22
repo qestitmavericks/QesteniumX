@@ -14,7 +14,7 @@ import com.qestit.projects.ecommerce.pages.RegisterationPage;
 import com.qestit.projects.ecommerce.pages.ShoppingCartPage;
 
 
-public class CommonPage{
+public class BasePage{
 	private HomePage homePage;
 	private RegisterationPage registerationPage;
 	private LoginPage loginPage;
@@ -93,12 +93,12 @@ public class CommonPage{
         return getTextElement(by);
     }
 	
-	public CommonPage clickMenuProducts() {
+	public BasePage clickMenuProducts() {
         clickElement(createDynamicXPath("FinalCustomLocator", "replacementText"));
         return this;
     }
 	
-	public CommonPage UserCanSearchProduct(String productName) {
+	public BasePage UserCanSearchProduct(String productName) {
 		setText(searchBox, productName);
 		moveToElement(searchProduct);
 		//selectOptionByIndex(searchProduct, 0);

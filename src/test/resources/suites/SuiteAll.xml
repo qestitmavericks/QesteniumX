@@ -3,7 +3,7 @@
 <suite name="Regression Test ECOMMERCE" parallel="methods">
 	<parameter name="BROWSER" value="firefox"/>
     <suite-files>
-        <suite-file path="ECOMMERCE/SimpleE2ETest.xml"/>
+        <suite-file path="ECOMMERCE/SimpleE2ETest_v02.xml"/>
         <suite-file path="ECOMMERCE/TestSimpleCode.xml"/>
     </suite-files>
 </suite>

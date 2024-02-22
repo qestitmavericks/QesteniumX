@@ -3,7 +3,7 @@
  * QesteniumX - QESTIT
  */
 
-package com.qestit.mail;
+package com.qestit.EmailService;
 
 import javax.mail.*;
 import javax.mail.internet.*;

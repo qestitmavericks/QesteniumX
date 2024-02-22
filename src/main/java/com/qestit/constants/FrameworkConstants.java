@@ -26,6 +26,8 @@ public final class FrameworkConstants {
     public static final String JSON_DATA_FILE_PATH = PropertiesHelpers.getValue("JSON_DATA_FILE_PATH");
     public static final String EXCEL_ECOMMERCE_LOGIN = PropertiesHelpers.getValue("EXCEL_ECOMMERCE_LOGIN");
     public static final String EXCEL_ECOMMERCE_DATA = PropertiesHelpers.getValue("EXCEL_ECOMMERCE_DATA");
+    public static final String JSON_LOCALIZATION_EN = PropertiesHelpers.getValue("JSON_LOCALIZATION_EN");
+    public static final String JSON_LOCALIZATION_DE = PropertiesHelpers.getValue("JSON_LOCALIZATION_DE");
     
     public static final String JIRA_URL = PropertiesHelpers.getValue("JIRA_URL");
     public static final String JIRA_USERNAME = PropertiesHelpers.getValue("JIRA_USERNAME");
@@ -78,7 +80,10 @@ public final class FrameworkConstants {
     public static final String EXTENT_REPORT_FOLDER_PATH = PROJECT_PATH + EXTENT_REPORT_FOLDER;
     public static final String EXTENT_REPORT_FILE_NAME = EXTENT_REPORT_NAME + ".html";
     public static String EXTENT_REPORT_FILE_PATH = EXTENT_REPORT_FOLDER_PATH + File.separator + EXTENT_REPORT_FILE_NAME;
-
+    
+    //API
+    public static final String API_ENDPOINT = PropertiesHelpers.getValue("API_ENDPOINT");
+    
     //Zip file for Report folder
     public static final String ZIPPED_EXTENT_REPORTS_FOLDER = EXTENT_REPORT_FOLDER + ".zip";
 

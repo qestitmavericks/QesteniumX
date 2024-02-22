@@ -6,10 +6,10 @@
         <listener class-name="com.qestit.listeners.AnnotationTransformer"/>
     </listeners>
     
-    <test name="Tests Simple Code Functions">
+    <test name="Tests End to End Shopping ">
         <parameter name="BROWSER" value="chrome"/>
         <classes>
-            <class name="com.qestit.projects.ecommerce.testcases.TestSimpleCode"/>
+            <class name="com.qestit.projects.ecommerce.testcases.SimpleE2ETest_v02"/>
         </classes>
     </test>
 

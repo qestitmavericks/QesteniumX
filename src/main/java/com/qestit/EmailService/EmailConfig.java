@@ -3,7 +3,7 @@
  * QesteniumX - QESTIT
  */
 
-package com.qestit.mail;
+package com.qestit.EmailService;
 
 import static com.qestit.constants.FrameworkConstants.REPORT_TITLE;
 

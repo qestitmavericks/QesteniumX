@@ -8,16 +8,16 @@ import java.util.Hashtable;
 
 import org.openqa.selenium.By;
 
-import com.qestit.projects.ecommerce.CommonPage;
+import com.qestit.projects.ecommerce.BasePage;
 import com.qestit.projects.ecommerce.models.CustomerModel;
 
-public class CheckOutPage extends CommonPage{
+public class CheckOutPage extends BasePage{
 	
 	public CheckOutPage() {
 		super();
 	}
 	
-	CommonPage commonPage;
+	BasePage commonPage;
 	private By countrySelect= By.xpath("//select[@id='BillingNewAddress_CountryId']");
 	private By cityText= By.xpath("//input[@id='BillingNewAddress_City']");
 	private By addreeText= By.xpath("//input[@id='BillingNewAddress_Address1']");

@@ -28,6 +28,7 @@ public class PropertiesHelpers {
         files.add("src/test/resources/config/config.properties");
         files.add("src/test/resources/config/data.properties");
         files.add("src/test/resources/objects/locators.properties");
+        files.add("src/test/resources/config/localizationData.properties");
 
         try {
             properties = new Properties();

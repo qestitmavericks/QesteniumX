@@ -4,10 +4,10 @@ import static com.qestit.keywords.WebAction.clickElement;
 
 import org.openqa.selenium.By;
 
-import com.qestit.projects.ecommerce.CommonPage;
+import com.qestit.projects.ecommerce.BasePage;
 
 
-public class ProductPage extends CommonPage{
+public class ProductPage extends BasePage{
 	
 	public ProductPage() {
 		super();

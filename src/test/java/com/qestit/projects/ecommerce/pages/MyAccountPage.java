@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 
 import com.qestit.constants.FrameworkConstants;
 import com.qestit.helpers.ExcelHelpers;
-import com.qestit.projects.ecommerce.CommonPage;
+import com.qestit.projects.ecommerce.BasePage;
 
-public class MyAccountPage extends CommonPage {
+public class MyAccountPage extends BasePage {
 	
 	public MyAccountPage(){
 		super();

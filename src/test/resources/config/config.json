@@ -1,5 +1,5 @@
 {
-  "url": "https://crm.qestit.com/signin",
+  "url": "https://qestit.com/signin",
   "browser": "chrome",
   "button": "//a[contains(text(),'qestit')]"
 }

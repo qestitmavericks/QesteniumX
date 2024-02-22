@@ -5,9 +5,9 @@ import static com.qestit.keywords.WebAction.setText;
 
 import org.openqa.selenium.By;
 
-import com.qestit.projects.ecommerce.CommonPage;
+import com.qestit.projects.ecommerce.BasePage;
 
-public class LoginPage extends CommonPage{
+public class LoginPage extends BasePage{
 	
 	public LoginPage() {
 		super();

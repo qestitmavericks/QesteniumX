@@ -6,6 +6,8 @@
         <format>jar</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
+
+    <!-- FileSets section to include project files -->
     <fileSets>
         <fileSet>
             <directory>${project.basedir}</directory>
@@ -15,4 +17,18 @@
             </includes>
         </fileSet>
     </fileSets>
+
+    <!-- DependencySets section to include runtime dependencies -->
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/lib</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <unpack>false</unpack>
+            <scope>runtime</scope>
+        </dependencySet>
+    </dependencySets>
+
+    <!-- To Run in Commandline 'mvn clean compile assembly:single' -->
+    <!-- Additional configurations if needed -->
+
 </assembly>

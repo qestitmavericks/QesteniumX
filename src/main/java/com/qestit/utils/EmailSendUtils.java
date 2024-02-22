@@ -5,13 +5,13 @@
 
 package com.qestit.utils;
 
+import com.qestit.EmailService.EmailAttachmentsSender;
 import com.qestit.constants.FrameworkConstants;
-import com.qestit.mail.EmailAttachmentsSender;
 
 import javax.mail.MessagingException;
 
+import static com.qestit.EmailService.EmailConfig.*;
 import static com.qestit.constants.FrameworkConstants.REPORT_TITLE;
-import static com.qestit.mail.EmailConfig.*;
 
 public class EmailSendUtils {
 
