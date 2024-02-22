@@ -9,7 +9,7 @@ com.qestit.exceptions
 com.qestit.helpers
 com.qestit.keywords
 com.qestit.listeners
-com.qestit.mail
+com.qestit.EmailService
 com.qestit.projects
 com.qestit.projects.ecommerce
 com.qestit.projects.ecommerce.models

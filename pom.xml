@@ -58,10 +58,11 @@
 		<maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
 		<httpclient5.version>5.3</httpclient5.version>
 		<json-simple.version>1.1.1</json-simple.version>
-		
+		<jsch.version>0.1.55</jsch.version>
+
 
 		<!-- Suite XML path - ECOMERCE -->
-		
+
 		<!-- Suite XML path - ALL -->
 		<suite.all>src/test/resources/suites/SuiteAll.xml</suite.all>
 
@@ -355,6 +356,13 @@
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
 			<version>${json-simple.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>${jsch.version}</version>
 		</dependency>
 
 
