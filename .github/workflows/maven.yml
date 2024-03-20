@@ -5,8 +5,11 @@
 name: E2E Regression Testing
 
 on:
+  push:
+    branches: [ "main" ]
   pull_request:
-    branches: [ master ]
+    branches: [ "main" ]
+
   schedule:
     - cron: '00 4 * * *'
   workflow_dispatch:
