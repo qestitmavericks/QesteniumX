@@ -2,13 +2,14 @@ package com.qestit.helpers;
 
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
+import com.qestit.data.IJsonDataManager;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class JsonHelpers {
+public class JsonHelpers implements IJsonDataManager {
     //Json Path
     private BufferedReader bufferedReader;
     private StringBuffer stringBuffer;

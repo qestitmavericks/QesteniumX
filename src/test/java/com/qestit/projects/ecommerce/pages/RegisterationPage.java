@@ -14,7 +14,7 @@ public class RegisterationPage {
 	private By password= By.cssSelector("#Password");
 	private By confirmPassword= By.cssSelector("#ConfirmPassword");
 	private By RegisterBtn= By.cssSelector("#register-button");
-	public By registerMessage= By.xpath("//div[@class='result']");
+	public By registerMessage= By.cssSelector(".result");
 	public By continueBTN= By.xpath("//a[@class=\"button-1 register-continue-button\"]");
 	
 	public void userCanRegister(String fName, String lName, String email, String pass ) {

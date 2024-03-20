@@ -61,6 +61,6 @@ public class CompleteOrderTest extends BaseTest {
 		clickElement(getCheckOutPage().confirmBTN);
 		String CompleteMsg=getMessageNotify(getCheckOutPage().OrderCompletedMsg);
 		assertEquals(CompleteMsg, "Your order has been successfully processednnn!");
-		getMyAccountPage().userCanLogOut();
+		getLogOutPage().userCanLogOut();
 	}
 }

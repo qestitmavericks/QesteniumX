@@ -14,6 +14,7 @@ import com.qestit.common.BaseTest;
 import com.qestit.config.ConfigFactory;
 import com.qestit.config.Configuration;
 import com.qestit.constants.FrameworkConstants;
+import com.qestit.data.IExcelDataManager;
 import com.qestit.dataprovider.DataProviderManager;
 import com.qestit.enums.AuthorType;
 import com.qestit.enums.CategoryType;
@@ -28,9 +29,11 @@ import io.qameta.allure.Feature;
 @Feature("E2E Shopping")
 public class SimpleE2ETest_v02 extends BaseTest {
 	BasePage basePage;
+	IExcelDataManager excelManager;
 	
 	public SimpleE2ETest_v02() {
 		basePage= new BasePage();
+		excelManager = new ExcelHelpers();
 	}
 	
 //	HomePage homePage;
@@ -54,13 +57,13 @@ public class SimpleE2ETest_v02 extends BaseTest {
 		navigateToUrl(urlEcommerce);
 		getHomePage().ClickRegisterLink();
 		//Here we use the traditional approach the values from properties Files
-		excel.setExcelFile(FrameworkConstants.EXCEL_ECOMMERCE_LOGIN, "Register");
-		getRegisterationPage().userCanRegister(excel.getCellData(1, "firstName"), excel.getCellData(1, "lastName"), email, excel.getCellData(1, "password"));
+		excelManager.setExcelFile(FrameworkConstants.EXCEL_ECOMMERCE_LOGIN, "Register");
+		getRegisterationPage().userCanRegister(excelManager.getCellData(1, "firstName"), excelManager.getCellData(1, "lastName"), email, excelManager.getCellData(1, "password"));
 		String RegMessage=getMessageNotify(getRegisterationPage().registerMessage);
 		assertEquals(RegMessage, "Your registration completed");
 		clickElement(getRegisterationPage().continueBTN);
 		clickElement(basePage.loginBTN);
-		getLoginPage().loginWithCorrectCreditials(email, excel.getCellData(1, "password"));
+		getLoginPage().loginWithCorrectCreditials(email, excelManager.getCellData(1, "password"));
 		//getLoginPage().UserCanSearchProduct("laptop");
 		//getMyAccountPage().SearchProduct();
 		UserCanSearchProduct(PropertiesHelpers.getValue("product_P01"));
@@ -76,6 +79,6 @@ public class SimpleE2ETest_v02 extends BaseTest {
 		clickElement(getLocator("confirmBTN"));
 		String CompleteMsg=getMessageNotify(getCheckOutPage().OrderCompletedMsg);
 		assertEquals(CompleteMsg, "Your order has been successfully processed!");
-		getMyAccountPage().userCanLogOut();
+		getLogOutPage().userCanLogOut();
 	}
 }

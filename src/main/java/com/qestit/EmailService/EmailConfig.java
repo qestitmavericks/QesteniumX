@@ -19,11 +19,11 @@ public class EmailConfig {
     //send_email_to_users=yes
 
     public static final String SERVER = "smtp.gmail.com";
-    public static final String PORT = "465";
+    public static final String PORT = "587";
 
     public static final String FROM = "khalilhany76@gmail.com";
-    public static final String PASSWORD = "**************";
+    public static final String PASSWORD = "*************";
 
-    public static final String[] TO = {"lucidtours@yahoo.com"};
+    public static final String[] TO = {"khalilhany76@gmail.com", "hanykhalil1976@yahoo.de"};
     public static final String SUBJECT = REPORT_TITLE;
 }

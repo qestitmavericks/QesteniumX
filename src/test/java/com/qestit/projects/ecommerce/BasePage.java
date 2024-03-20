@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 
 import com.qestit.projects.ecommerce.pages.CheckOutPage;
 import com.qestit.projects.ecommerce.pages.HomePage;
+import com.qestit.projects.ecommerce.pages.LogOutPage;
 import com.qestit.projects.ecommerce.pages.LoginPage;
 import com.qestit.projects.ecommerce.pages.MyAccountPage;
 import com.qestit.projects.ecommerce.pages.ProductPage;
@@ -22,6 +23,7 @@ public class BasePage{
 	private ProductPage productPage;
 	private ShoppingCartPage shoppingCartPage;
 	private CheckOutPage checkOutPage;
+	private LogOutPage logOutPage;
 	
 	
 	
@@ -74,12 +76,17 @@ public class BasePage{
 		return checkOutPage;
 	}
 	
+	public LogOutPage getLogOutPage() {
+		if(logOutPage== null) {
+			logOutPage= new LogOutPage();
+		}
+		return logOutPage;
+	}
+	
 	
 	private By messageNotify= By.xpath("//h2[normalize-space()='Welcome to our store']");
-	private By RegisterBtn= By.cssSelector("#register-button");
 	public By loginBTN= By.cssSelector(".ico-login");
 	private By selectCurrency= By.id("customerCurrency");
-	private By logOutBTN= By.xpath("//a[@class=\"ico-logout\"]");
 	private By searchBox= By.cssSelector("#small-searchterms");
 	private By searchBTN = By.xpath("//button[@type='submit']");
 	private By searchProduct= By.xpath("//span[normalize-space()='Asus N551JK-XO076H Laptop']");
@@ -101,15 +108,9 @@ public class BasePage{
 	public BasePage UserCanSearchProduct(String productName) {
 		setText(searchBox, productName);
 		moveToElement(searchProduct);
-		//selectOptionByIndex(searchProduct, 0);
 		clickElement(searchBTN);
 		return this;
 		
-	 }
-	
-	public LoginPage userCanLogOut() {
-		clickElement(logOutBTN);
-		return new LoginPage();
 	 }
 	
 	/**
@@ -131,9 +132,5 @@ public class BasePage{
 	}
 	
 	
-	
-	
-	
-	
-	
+		
 }

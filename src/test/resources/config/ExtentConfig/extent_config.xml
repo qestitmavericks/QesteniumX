@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <theme>standard</theme>
+    
+        <!-- enables timeline -->
+        <enableTimeline>true</enableTimeline>
+	
+        <!-- document encoding -->
+        <encoding>UTF-8</encoding>
+        
+        <!-- protocol for script and stylesheets -->
+        <protocol>https</protocol>
+        
+        <!-- title of the document -->
+        <documentTitle>Extent Framework</documentTitle>
+        
+        <!-- report name - displayed at top-nav -->
+        <reportName>
+            <![CDATA[
+                 <img src='src/test/resources/config/ExtentConfig/ExtentReport_logo.png'/>
+            ]]>
+        </reportName>
+       
+          
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+                    // Custom JavaScript can go here
+                });
+            ]]>
+        </scripts>
+        
+        <!-- custom styles -->
+        <styles>
+            <![CDATA[
+                /* Custom styles for the logo and report name */
+                .report-name {
+                    float: left; /* Floats the report name to the left */
+                    line-height: 50px; /* Adjust the line height to vertically center the text with the logo */
+                    padding-left: 60px; /* Add padding-left if needed */
+                }
+                .logo {
+                    float: left; /* Floats the logo to the left */
+                    height: 50px; /* Adjust the logo size as needed */
+                    width: auto; /* Maintain aspect ratio */
+                    margin-right: 10px; /* Add some space between the logo and the report name */
+                }
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>

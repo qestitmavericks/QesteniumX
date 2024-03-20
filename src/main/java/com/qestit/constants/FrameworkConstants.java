@@ -44,6 +44,8 @@ public final class FrameworkConstants {
     public static final String PROJECT_NAME = PropertiesHelpers.getValue("PROJECT_NAME");
     public static final String REPORT_TITLE = PropertiesHelpers.getValue("REPORT_TITLE");
     public static final String EXTENT_REPORT_NAME = PropertiesHelpers.getValue("EXTENT_REPORT_NAME");
+    public static final String EXTENT_REPORT_LOGO = PropertiesHelpers.getValue("EXTENT_REPORT_LOGO");
+    public static final String EXTENT_CONFIG_XML = PropertiesHelpers.getValue("EXTENT_CONFIG_XML");
     public static final String EXTENT_REPORT_FOLDER = PropertiesHelpers.getValue("EXTENT_REPORT_FOLDER");
     public static final String EXPORT_VIDEO_PATH = PropertiesHelpers.getValue("EXPORT_VIDEO_PATH");
     public static final String EXPORT_CAPTURE_PATH = PropertiesHelpers.getValue("EXPORT_CAPTURE_PATH");

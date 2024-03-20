@@ -96,6 +96,6 @@ public class SimpleE2ETest extends BaseTest {
 		NavigationUtil.navigateTo(SitePage.HOME);
 		clickElement(commonPage.loginBTN);
 		getLoginPage().loginWithCorrectCreditials(email, excel.getCellData(1, "password"));
-		getMyAccountPage().userCanLogOut();
+		getLogOutPage().userCanLogOut();
 	}
 }

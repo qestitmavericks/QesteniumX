@@ -6,6 +6,7 @@
 package com.qestit.projects.ecommerce.testcases;
 
 import com.qestit.constants.FrameworkConstants;
+import com.qestit.data.IJsonDataManager;
 import com.qestit.helpers.*;
 import com.qestit.keywords.WebAction;
 import com.qestit.report.TelegramManager;
@@ -13,7 +14,11 @@ import com.qestit.utils.*;
 import org.testng.annotations.Test;
 
 public class TestSimpleCode {
-
+	IJsonDataManager jsonManager;
+	
+	public TestSimpleCode() {
+		jsonManager = new JsonHelpers();
+	}
     @Test
     public void testReadDataFromJSON_01() {
         //JSONPath Online Evaluator - https://jsonpath.com/
@@ -49,13 +54,13 @@ public class TestSimpleCode {
         JsonHelpers jsonHelpers = new JsonHelpers();
 
         //Set Json file
-        jsonHelpers.setJsonFile("src/test/resources/datajson/book.json");
+        jsonManager.setJsonFile("src/test/resources/datajson/book.json");
 
         //Get title of book
-        System.out.println(jsonHelpers.getData("$.book[1].title"));
+        System.out.println(jsonManager.getData("$.book[1].title"));
 
         //Get cheap
-        System.out.println(jsonHelpers.getData("$.['price range'].cheap"));
+        System.out.println(jsonManager.getData("$.['price range'].cheap"));
     }
 
 

@@ -5,12 +5,6 @@
 
 package com.qestit.helpers;
 
-import com.qestit.exceptions.InvalidPathForExcelException;
-import com.qestit.utils.LogUtils;
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -19,7 +13,24 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 
-public class ExcelHelpers {
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.VerticalAlignment;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.qestit.data.IExcelDataManager;
+import com.qestit.exceptions.InvalidPathForExcelException;
+import com.qestit.utils.LogUtils;
+
+public class ExcelHelpers implements IExcelDataManager{
 
     private FileInputStream fis;
     private FileOutputStream fileOut;
