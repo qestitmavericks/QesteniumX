@@ -46,8 +46,20 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Chrome_Linux_Summary
-          path: "reports/*"
-
+          path: "target/*"
+      - name: Upload Extent Report as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Extent_Report
+          path: reports/ExtentReports/ExtentReports.html
+      - name: Publish Test Results
+        continue-on-error: true
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          check_name: "Tests Results Chrome_Linux"
+          files: |
+            target/surefire-reports/TEST-*.xml
   E2E_Firefox_Linux_Test:
     runs-on: ubuntu-latest
     permissions:
@@ -76,8 +88,20 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Firefox_Linux_Summary
-          path: "reports/*"
-
+          path: "target/*"
+      - name: Upload Extent Report as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Extent_Report
+          path: reports/ExtentReports/ExtentReports.html
+      - name: Publish Test Results
+        continue-on-error: true
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          check_name: "Tests Results Firefox_Linux"
+          files: |
+            target/surefire-reports/TEST-*.xml
   E2E_Edge_Windows_Test:
     runs-on: windows-latest
     permissions:
@@ -106,8 +130,20 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Edge_Windows_Summary
-          path: "reports/*"
-
+          path: "target/*"
+      - name: Upload Extent Report as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Extent_Report
+          path: reports/ExtentReports/ExtentReports.html
+      - name: Publish Test Results
+        continue-on-error: true
+        uses: EnricoMi/publish-unit-test-result-action/composite@v2
+        if: always()
+        with:
+            check_name: "Tests Results Edge_Windows"
+            files: |
+                target/surefire-reports/TEST-*.xml
   E2E_Safari_MacOS_Test:
     runs-on: macos-latest
     permissions:
@@ -136,6 +172,18 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Safari_MacOS_Summary
-          path: "reports/*"
-
+          path: "target/*"
+      - name: Upload Extent Report as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Extent_Report
+          path: reports/ExtentReports/ExtentReports.html
+      - name: Publish Test Results
+        continue-on-error: true
+        uses: EnricoMi/publish-unit-test-result-action/composite@v2
+        if: always()
+        with:
+            check_name: "Tests Results Safari_MacOS"
+            files: |
+              target/surefire-reports/TEST-*.xml
 # Optional: Add additional jobs for other browsers/platforms as needed.
